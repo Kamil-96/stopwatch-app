@@ -7,7 +7,7 @@
   "scripts": {
     "start": "npm-run-all build-dev -p watch:*",
     "build-dev": "npm-run-all build-dev:sass build-dev:autoprefixer",
-    "build-dev:autoprefixer": "postcss dist/css/style.css --use autoprefixer -d css",
+    "build-dev:autoprefixer": "postcss dist/css/style.css --use autoprefixer -d dist/css",
     "build-dev:sass": "node-sass --output-style expanded --source-map true -o dist/css src/styles",
     "watch:browsersync": "browser-sync --serveStatic \"./dist\" --index \"dist/index.html\" start --server --files \"dist/css/*.css\" \"dist/*.html\" \"dist/js/*.js\"",
     "watch:sassprefixer": "onchange src/styles/style.scss -- npm run build-dev",
