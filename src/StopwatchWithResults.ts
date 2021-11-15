@@ -22,26 +22,11 @@ class StopwatchWithResults extends Stopwatch {
   }
 
   private renderList(): void {
-    /*
-    Funkcja ta powinna czyścić zawartość this.dom.resultsList, a następnie renderować w niej nowe elementy li
-    na podstawie zawartości tablicy this.results. Każdy jej element powinien być renderowany bez żadnych zmian.
-
-    np. <li>00:12:00</li>
-    */
-
     this.dom.resultsList.innerHTML = '';
-    //this.dom.resultsList.innerHTML = `<li>${this.results[this.results.length - 1]}</li>`;
 
-
-    /*for(let i = 0; i < this.results.length; i++) {
-      this.dom.resultsList.innerHTML = `<li>${this.results[this.results.length - 1]}</li>`;
-    }*/
-
-    /*this.results.map(result => (
-      this.dom.resultsList.innerHTML = `<li>${result}</li>`
-    ));*/
-
-    console.log(this.results);
+    this.results.map(result => (
+      this.dom.resultsList.insertAdjacentHTML('beforeend', `<li>${result}</li>`)
+    ));
   }
 
   private addToList(): void {
