@@ -47,11 +47,12 @@ abstract class Stopwatch {
   }
 
   private start(): void {
-    this.timer = setInterval(() => this.step(), 1);
+    this.timer = setInterval(this.step, 10);
   }
 
-  private step(): void {
-    this.currentTime++;
+
+  private step = (): void => {
+    this.currentTime += 10;
     this.renderTime();
   }
 

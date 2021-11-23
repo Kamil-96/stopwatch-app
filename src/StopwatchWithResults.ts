@@ -5,13 +5,13 @@ class StopwatchWithResults extends Stopwatch {
   private results: string[] = [];
 
   constructor(element: HTMLDivElement) {
-    super(element)
-    this.prepareElements(element)
-    this.prepareActions()
+    super(element);
+    this.prepareElements(element);
+    this.prepareActions();
   }
 
   private prepareElements(element: HTMLDivElement): void {
-    this.dom.resultsList = <HTMLDivElement> element.querySelector('.stopwatch__results');
+    this.dom.resultsList = <HTMLDivElement> element.querySelector('.stopwatch__results__list');
     this.dom.addToListBtn = <HTMLButtonElement> element.querySelector('.stopwatch__add-to-list-btn');
     this.dom.resetListBtn = <HTMLButtonElement> element.querySelector('.stopwatch__reset-list-btn');
   }
