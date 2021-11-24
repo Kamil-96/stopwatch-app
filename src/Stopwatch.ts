@@ -57,7 +57,9 @@ abstract class Stopwatch {
   }
 
   private stop(): void {
-    clearInterval(this.timer);
+    if(this.timer) {
+      clearInterval(this.timer);
+    }
   }
 
   private reset(): void {
